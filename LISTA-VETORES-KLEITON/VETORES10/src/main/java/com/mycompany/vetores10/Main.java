@@ -1,15 +1,27 @@
+/*
+Faça um programa em Java que leia um vetor **Q** contendo **20 números inteiros positivos**.
+Em seguida, determine e mostre:
+* O maior valor armazenado no vetor e sua respectiva posição;
+* O menor valor armazenado no vetor e sua respectiva posição.
+O programa não deve aceitar números menores ou iguais a zero.
+*/
+
 package com.mycompany.vetores10;
 
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         int[] Q = new int[20];
 
         System.out.println("Digite os 20 números positivos:");
+
         for (int i = 0; i < 20; i++) {
+
             while (true) {
                 System.out.print("Elemento Q[" + (i + 1) + "]: ");
                 int valor = scanner.nextInt();
@@ -17,6 +29,7 @@ public class Main {
                     Q[i] = valor;
                     break;
                 } else {
+                    
                     System.out.println("Por favor, digite um número positivo.");
                 }
             }
