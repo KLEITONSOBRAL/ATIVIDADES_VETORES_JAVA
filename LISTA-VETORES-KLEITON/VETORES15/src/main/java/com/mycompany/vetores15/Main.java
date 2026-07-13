@@ -1,48 +1,57 @@
-package com.mycompany.vetores15;
+/*
+Faça um programa em Java que leia e armazene, em um vetor, as temperaturas médias
+registradas em cada um dos **365 dias do ano**.
+Após a leitura, o programa deverá calcular e exibir:
+* A menor temperatura registrada no ano;
+* A maior temperatura registrada no ano;
+* A temperatura média anual;
+* A quantidade de dias em que a temperatura ficou abaixo da média anual.
+*/
+
+package com.mycompany.vetores14;
 
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        int[] vetor = new int[20];
-        int[] novoVetor;
-        boolean numeroEncontrado = false;
-        int numeroBuscado;
+        int[] temperaturas = new int[365];
+        double somaTemperaturas = 0;
+        int menorTemperatura = Integer.MAX_VALUE;
+        int maiorTemperatura = Integer.MIN_VALUE;
 
-        System.out.println("Digite 20 números para o vetor:");
-        for (int i = 0; i < 20; i++) {
-            System.out.print("Número " + (i + 1) + ": ");
-            vetor[i] = scanner.nextInt();
-        }
+        System.out.println("Digite as temperaturas médias de todos os dias do ano (365 dias):");
+        for (int i = 0; i < 365; i++) {
+            System.out.print("Dia " + (i + 1) + ": ");
+            temperaturas[i] = scanner.nextInt();
+            somaTemperaturas += temperaturas[i];
 
-        System.out.print("Digite um número para buscar no vetor: ");
-        numeroBuscado = scanner.nextInt();
+            if (temperaturas[i] < menorTemperatura) {
+                menorTemperatura = temperaturas[i];
+            }
 
-        for (int i = 0; i < 20; i++) {
-            if (vetor[i] == numeroBuscado) {
-                numeroEncontrado = true;
-                break;
+            if (temperaturas[i] > maiorTemperatura) {
+                maiorTemperatura = temperaturas[i];
             }
         }
 
-        if (numeroEncontrado) {
-            novoVetor = new int[19]; 
-            int indexNovoVetor = 0;
-            for (int i = 0; i < 20; i++) {
-                if (vetor[i] != numeroBuscado) {
-                    novoVetor[indexNovoVetor++] = vetor[i];
-                }
-            }
+        double mediaAnual = somaTemperaturas / 365;
 
-            System.out.println("\nNovo vetor (sem o número " + numeroBuscado + "):");
-            for (int i = 0; i < 19; i++) {
-                System.out.print(novoVetor[i] + " ");
+        int diasAbaixoMedia = 0;
+        for (int i = 0; i < 365; i++) {
+            if (temperaturas[i] < mediaAnual) {
+                diasAbaixoMedia++;
             }
-        } else {
-            System.out.println("\nO número " + numeroBuscado + " não existe no vetor.");
         }
+
+        System.out.println("\nResultados:");
+        System.out.println("Menor temperatura do ano: " + menorTemperatura);
+        System.out.println("Maior temperatura do ano: " + maiorTemperatura);
+        System.out.println("Temperatura média anual: " + mediaAnual);
+        System.out.println("Número de dias com temperatura inferior à média anual: " + diasAbaixoMedia);
 
         scanner.close();
     }
