@@ -1,9 +1,17 @@
+/*
+Faça um programa em Java que leia dois vetores, **V1** e **V2**, cada um contendo **15 números inteiros**.
+Em seguida, compare os elementos que ocupam a mesma posição nos dois vetores e informe quantas vezes os 
+valores de **V1** e **V2** são iguais nas respectivas posições.
+*/
+
 package com.mycompany.vetores16;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         int[] V1 = new int[15];
