@@ -1,16 +1,27 @@
+/*
+Faça um programa em Java que leia um vetor **A** com **10 números inteiros** e um valor inteiro **X**. 
+Em seguida, crie um vetor **M**, também com 10 posições, em que cada elemento seja o resultado da multiplicação
+do elemento correspondente do vetor **A** pelo valor **X**.
+Ao final, mostre todos os elementos do vetor **M**.
+*/
+
 package com.mycompany.vetores11;
 
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         int[] A = new int[10];
         int[] M = new int[10];
 
         System.out.println("Digite 10 números para o vetor A:");
+
         for (int i = 0; i < 10; i++) {
+
             System.out.print("A[" + (i + 1) + "]: ");
             A[i] = scanner.nextInt();
         }
@@ -23,6 +34,7 @@ public class Main {
         }
 
         System.out.println("\nVetor M (resultado da multiplicação):");
+
         for (int i = 0; i < 10; i++) {
             System.out.println("M[" + (i + 1) + "]: " + M[i]);
         }
