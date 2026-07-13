@@ -1,3 +1,18 @@
+/*
+Faça um programa em Java que leia e armazene os dados de **250 pessoas**. 
+Para cada pessoa, deverão ser informados:
+* Nome;
+* Altura;
+* Peso;
+* Sexo, representado por **F** para feminino ou **M** para masculino.
+Após a leitura dos dados, o programa deverá:
+* Exibir a listagem de todas as pessoas cadastradas;
+* Informar a quantidade de homens e de mulheres;
+* Calcular e mostrar o percentual de homens e de mulheres;
+* Calcular e mostrar a média de peso das pessoas;
+* Informar o nome da pessoa mais alta.
+*/
+
 package com.mycompany.vetores19;
 
 import java.util.Scanner;
