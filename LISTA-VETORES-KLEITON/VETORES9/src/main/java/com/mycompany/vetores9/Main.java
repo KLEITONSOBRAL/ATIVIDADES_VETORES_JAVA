@@ -1,20 +1,32 @@
+/*
+Crie um programa em Java que leia 20 números inteiros positivos e
+os armazene em um vetor chamado `Q`.
+O programa deverá validar os valores informados, não permitindo 
+números iguais ou menores que zero. Após o preenchimento do vetor, deverá identificar e exibir:
+1. O maior valor armazenado;
+2. A posição em que esse maior valor se encontra no vetor.
+*/
+
 package com.mycompany.vetores9;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
-
         
         int[] Q = new int[20];
-
         
         System.out.println("Digite os 20 números positivos:");
+        
         for (int i = 0; i < 20; i++) {
+            
             while (true) {
                 System.out.print("Elemento Q[" + (i + 1) + "]: ");
                 int valor = scanner.nextInt();
+                
                 if (valor > 0) {
                     Q[i] = valor;
                     break;
@@ -23,7 +35,6 @@ public class Main {
                 }
             }
         }
-
         
         int maiorValor = Q[0];
         int posicaoMaior = 0;
@@ -33,11 +44,9 @@ public class Main {
                 posicaoMaior = i;
             }
         }
-
         
         System.out.println("\nMaior valor: " + maiorValor);
         System.out.println("Posição do maior valor: Q[" + (posicaoMaior + 1) + "]");
-
         
         scanner.close();
     }
