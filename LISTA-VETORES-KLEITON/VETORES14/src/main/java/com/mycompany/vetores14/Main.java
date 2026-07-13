@@ -1,9 +1,20 @@
+/*
+Faça um programa em Java que armazene, em um vetor, as temperaturas médias registradas em cada um dos **365 dias do ano**.
+Após a leitura das temperaturas, o programa deverá calcular e mostrar:
+* A menor temperatura registrada no ano;
+* A maior temperatura registrada no ano;
+* A temperatura média anual;
+* A quantidade de dias em que a temperatura ficou abaixo da média anual.
+*/
+
 package com.mycompany.vetores14;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         int[] temperaturas = new int[365];
