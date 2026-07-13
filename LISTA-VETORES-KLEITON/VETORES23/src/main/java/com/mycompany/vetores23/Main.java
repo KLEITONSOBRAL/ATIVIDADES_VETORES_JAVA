@@ -1,9 +1,16 @@
+/*
+Faça um programa em Java que leia e armazene o nome de **3 estados** e suas respectivas **capitais** em uma matriz.
+Após a leitura, o programa deverá exibir cada estado acompanhado de sua capital.
+*/
+
 package com.mycompany.vetores23;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         String[][] estados = new String[3][2];
