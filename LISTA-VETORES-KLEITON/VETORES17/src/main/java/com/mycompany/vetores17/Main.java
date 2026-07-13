@@ -1,9 +1,16 @@
+/*
+Faça um programa em Java que leia e armazene **30 números inteiros** em um vetor.
+Em seguida, leia um número a ser pesquisado e informe quantas vezes esse número aparece no vetor.
+*/
+
 package com.mycompany.vetores17;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         int[] vetor = new int[30];
