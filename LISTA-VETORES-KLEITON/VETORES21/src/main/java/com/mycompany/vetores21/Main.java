@@ -1,3 +1,12 @@
+/*
+Faça um programa em Java que cadastre funcionários, armazenando o **nome** e o **salário** de cada um. 
+O cadastro deverá continuar enquanto o usuário desejar.
+Após o encerramento dos cadastros, o programa deverá:
+* Calcular a média salarial dos funcionários;
+* Exibir os nomes e os salários dos funcionários que recebem acima da média;
+* Exibir os nomes dos funcionários cujo nome começa com a letra **A**.
+*/
+
 package com.mycompany.vetores21;
 
 import java.util.ArrayList;
@@ -5,7 +14,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         List<String> nomes = new ArrayList<>();
