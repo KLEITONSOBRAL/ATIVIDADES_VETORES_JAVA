@@ -1,3 +1,13 @@
+/*
+Faça um programa em Java que cadastre produtos, armazenando a **descrição** e o **valor** de cada produto.
+O cadastro deverá continuar enquanto o usuário desejar.
+Após o encerramento dos cadastros, o programa deverá:
+* Calcular a média dos valores dos produtos;
+* Exibir a descrição e o valor dos produtos com preço abaixo da média;
+* Solicitar um caractere ao usuário;
+* Exibir as descrições dos produtos que começam com o caractere informado, sem diferenciar letras maiúsculas de minúsculas.
+*/
+
 package com.mycompany.vetores22;
 
 import java.util.ArrayList;
@@ -5,7 +15,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         List<String> descricoes = new ArrayList<>();
