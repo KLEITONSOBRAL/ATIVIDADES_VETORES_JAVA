@@ -1,9 +1,19 @@
+/*
+Faça um programa em Java que leia e armazene **1.000 números inteiros** em um vetor.
+Após a leitura, o programa deverá:
+* Exibir todos os números na ordem inversa àquela em que foram digitados;
+* Exibir somente os números ímpares;
+* Exibir somente os números que estejam no intervalo entre **10 e 50**, incluindo os limites.
+*/
+
 package com.mycompany.vetores20;
 
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
 
         int[] numeros = new int[1000];
